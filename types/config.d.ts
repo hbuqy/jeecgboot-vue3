@@ -153,16 +153,18 @@ export interface GlobConfig {
   urlPrefix?: string;
   // Project abbreviation
   shortName: string;
+  loadingText: string;
 }
 export interface GlobEnvConfig {
-  // Site title
+  // 网站标题
   VITE_GLOB_APP_TITLE: string;
-  // Service interface url
+  // 接口地址 可以由nginx做转发或者直接写实际地址
   VITE_GLOB_API_URL: string;
+  // 是否开启mock
   VITE_USE_MOCK: string;
-  // Service interface url prefix
+  // 接口地址前缀，有些系统所有接口地址都有前缀，可以在这里统一加，方便切换
   VITE_GLOB_API_URL_PREFIX?: string;
-  // Project abbreviation
+  // 简称，用于配置文件名字 不要出现空格、数字开头等特殊字符
   VITE_GLOB_APP_SHORT_NAME: string;
   //是否开启单点登录
   VITE_GLOB_APP_OPEN_SSO: string;
@@ -170,9 +172,12 @@ export interface GlobEnvConfig {
   VITE_GLOB_APP_OPEN_QIANKUN: string;
   //单点服务端地址
   VITE_GLOB_APP_CAS_BASE_URL: string;
+  //后台接口全路径地址
   VITE_GLOB_DOMAIN_URL: string;
-  // Upload url
+  //文件上传接口
   VITE_GLOB_UPLOAD_URL?: string;
-  // view url
+  //文件预览地址
   VITE_GLOB_ONLINE_VIEW_URL?: string;
+  //页面加载提示文字
+  VITE_GLOB_APP_LOADING_TEXT: string;
 }

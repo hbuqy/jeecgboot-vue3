@@ -1,3 +1,4 @@
+/* eslint-disable vue/multi-word-component-names */
 import type { App } from 'vue';
 import { registerJVxeTable } from '/@/components/jeecg/JVxeTable';
 import { registerJVxeCustom } from '/@/components/JVxeCustom';

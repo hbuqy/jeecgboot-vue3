@@ -10,10 +10,11 @@ declare global {
     };
     lastBuildTime: string;
   };
-  // declare interface Window {
-  //   // Global vue app instance
-  //   __APP__: App<Element>;
-  // }
+  declare interface Window {
+    // Global vue app instance
+    // _APP__: App<Element>;
+    _CONFIG: any;
+  }
 
   // vue
   declare type PropType<T> = VuePropType<T>;
@@ -57,6 +58,7 @@ declare global {
     VITE_PROXY: [string, string][];
     VITE_GLOB_APP_TITLE: string;
     VITE_GLOB_APP_SHORT_NAME: string;
+    VITE_GLOB_APP_LOADING_TEXT: string;
     VITE_USE_CDN: boolean;
     VITE_DROP_CONSOLE: boolean;
     VITE_BUILD_COMPRESS: 'gzip' | 'brotli' | 'none';

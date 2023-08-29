@@ -13,13 +13,8 @@ export const useGlobSetting = (): Readonly<GlobConfig> => {
     VITE_GLOB_APP_OPEN_QIANKUN,
     VITE_GLOB_DOMAIN_URL,
     VITE_GLOB_ONLINE_VIEW_URL,
+    VITE_GLOB_APP_LOADING_TEXT,
   } = getAppEnvConfig();
-
-  if (!/[a-zA-Z\_]*/.test(VITE_GLOB_APP_SHORT_NAME)) {
-    // warn(
-    //   `VITE_GLOB_APP_SHORT_NAME Variables can only be characters/underscores, please modify in the environment variables and re-running.`
-    // );
-  }
 
   // Take global configuration
   const glob: Readonly<GlobConfig> = {
@@ -33,6 +28,7 @@ export const useGlobSetting = (): Readonly<GlobConfig> => {
     urlPrefix: VITE_GLOB_API_URL_PREFIX,
     uploadUrl: VITE_GLOB_DOMAIN_URL,
     viewUrl: VITE_GLOB_ONLINE_VIEW_URL,
+    loadingText: VITE_GLOB_APP_LOADING_TEXT,
   };
   window._CONFIG['domianURL'] = VITE_GLOB_DOMAIN_URL;
   return glob as Readonly<GlobConfig>;

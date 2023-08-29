@@ -1,6 +1,6 @@
 <template>
   <div ref="exportRef">
-    <ViewEngine :dragData="dragData" :token="getToken()" @go="compRouter" @btnClick="btnClick"></ViewEngine>  
+    <ViewEngine :dragData="dragData" :token="getToken()" @go="compRouter" @btnClick="btnClick" />
   </div>
 </template>
 

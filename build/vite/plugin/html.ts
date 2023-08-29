@@ -8,7 +8,7 @@ import pkg from '../../../package.json';
 import { GLOB_CONFIG_FILE_NAME } from '../../constant';
 
 export function configHtmlPlugin(env: ViteEnv, isBuild: boolean) {
-  const { VITE_GLOB_APP_TITLE, VITE_PUBLIC_PATH } = env;
+  const { VITE_GLOB_APP_TITLE, VITE_PUBLIC_PATH, VITE_GLOB_APP_LOADING_TEXT } = env;
 
   const path = VITE_PUBLIC_PATH.endsWith('/') ? VITE_PUBLIC_PATH : `${VITE_PUBLIC_PATH}/`;
 
@@ -22,6 +22,7 @@ export function configHtmlPlugin(env: ViteEnv, isBuild: boolean) {
       // Inject data into ejs template
       data: {
         title: VITE_GLOB_APP_TITLE,
+        loadingText: VITE_GLOB_APP_LOADING_TEXT,
       },
       // Embed the generated app.config.js file
       tags: isBuild
